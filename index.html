@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiOne - The Future of Farming</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+</head>
+<body class="text-gray-800">
+    <div id="loading" class="fixed inset-0 bg-white z-[200] flex items-center justify-center flex-col hidden">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-green-500"></div>
+        <p class="mt-4 text-xl text-gray-700">Connecting...</p>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="ri-seedling-line text-3xl text-green-600"></i>
+                <span class="text-2xl font-bold text-gray-800">KrishiOne</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="text-gray-600 hover:text-green-600 font-medium transition" data-key="nav_home">Home</a>
+                <a href="#marketplace" class="text-gray-600 hover:text-green-600 font-medium transition" data-key="nav_marketplace">Marketplace</a>
+                <a href="#smart-tools" class="text-gray-600 hover:text-green-600 font-medium transition" data-key="nav_tools">Smart Tools</a>
+                <a href="#schemes-transparency" class="text-gray-600 hover:text-green-600 font-medium transition" data-key="nav_schemes">Govt Schemes</a>
+                <a href="#learning" class="text-gray-600 hover:text-green-600 font-medium transition" data-key="nav_learning">Learning Hub</a>
+            </nav>
+            
+               <button class="btn-primary px-6 py-2" data-key="login_register_btn" onclick="location.href='ayush.html'">Login/Register</button>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 text-3xl">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+        <div class="p-6">
+            <div class="flex justify-end">
+                <button id="close-mobile-menu-btn" class="text-gray-600 text-3xl">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <nav class="mt-8 flex flex-col space-y-4">
+                <a href="#" class="text-lg font-medium text-gray-800 hover:text-green-600 transition" data-key="nav_home">Home</a>
+                <a href="#marketplace" class="text-lg font-medium text-gray-800 hover:text-green-600 transition" data-key="nav_marketplace">Marketplace</a>
+                <a href="#smart-tools" class="text-lg font-medium text-gray-800 hover:text-green-600 transition" data-key="nav_tools">Smart Tools</a>
+                <a href="#schemes-transparency" class="text-lg font-medium text-gray-800 hover:text-green-600 transition" data-key="nav_schemes">Govt Schemes</a>
+                <a href="#learning" class="text-lg font-medium text-gray-800 hover:text-green-600 transition" data-key="nav_learning">Learning Hub</a>
+                <button class="btn-primary px-6 py-2 mt-4" data-key="login_register_btn">Login/Register</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    
+
+   <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container mx-auto px-10 hero-content">
+
+        <div class="hero-text">
+
+            <h1>
+                Farming Made <br>
+                Smarter with <br>
+                <span>KrishiOne</span>
+            </h1>
+
+            <p>
+                Get real-time advisory, connect with buyers,
+                discover government schemes and grow your
+                farm using AI-powered technology.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-primary px-8 py-3">
+                    Explore Marketplace
+                </button>
+
+                <button class="btn-secondary px-8 py-3">
+                    Smart Tools
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Problem & Solution Section -->
+<section id="problem-solution" class="py-20 bg-gradient-to-b from-white to-green-50">
+
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-14">
+
+            <span class="text-green-600 font-semibold tracking-widest uppercase">
+                Why KrishiOne?
+            </span>
+
+            <h2 class="text-5xl font-bold text-gray-800 mt-3">
+                From Traditional Farming to AI-Powered Agriculture
+            </h2>
+
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">
+                Discover how KrishiOne transforms farming by combining weather intelligence,
+                soil analysis, market insights, and AI-powered recommendations into one
+                unified platform.
+            </p>
+
+        </div>
+
+        <div class="relative group overflow-hidden rounded-3xl shadow-2xl">
+
+            <video
+    class="w-full rounded-3xl shadow-2xl"
+    autoplay
+    muted
+    loop
+    playsinline>
+    <source src="agri-solution.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+            <!-- Overlay -->
+
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+
+                <button
+                    onclick="document.getElementById('problemModal').classList.remove('hidden')"
+                    class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-green-700">
+
+                    Explore Solution
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Smart Tools Hub Section -->
+    <section id="smart-tools" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-key="smart_tools_title">Smart Tools for Modern Farming</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Data Analytics Card -->
+                <a href = "login12.html">
+                <div class="card p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <i class="ri-bar-chart-2-line text-6xl text-green-600 mb-4"></i>
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="data_analytics_title">Data Analytics</h3>
+                    <p class="text-gray-600 mt-2" data-key="data_analytics_desc">Get up-to-the-minute prices for all major commodities.</p>
+                </div>
+                </a>
+                <!-- AI Crop & Pest Advisor Card -->
+                <a href = "chatbot.html">
+                <div class="card p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <i class="ri-leaf-line text-6xl text-green-600 mb-4"></i>
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="ai_crop_advisor_title">AI Crop Advisor</h3>
+                    <p class="text-gray-600 mt-2" data-key="ai_crop_advisor_desc">Receive instant advice on crop health and pest control from our AI engine.</p>
+                </div>
+                </a>
+                <!-- Climate Estimator Card -->
+                <a href = "climate.html">
+                <div class="card p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <i class="ri-sun-cloudy-line text-6xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="climate_estimator_title">Climate Estimator</h3>
+                    <p class="text-gray-600 mt-2" data-key="climate_estimator_desc">Access daily weather forecasts and climate advisories tailored for your region.</p>
+                </div>
+                </a>  
+                <!-- Soil Sense Card -->
+                <a href = "soiltesting">
+                <div class="card p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <i class="ri-seedling-line text-6xl text-amber-600 mb-4"></i>
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="soil_sense_title">Soil Sense</h3>
+                    <p class="text-gray-600 mt-2" data-key="soil_sense_desc">Analyze your soil to optimize nutrient levels and improve crop yields.</p>
+                </div>
+                </a> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section id="marketplace" class="bg-gray-50 py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-key="marketplace_title">Fresh Produce Marketplace</h2>
+            <div class="flex items-center space-x-4 mb-8">
+                <input id="productSearch" type="text" placeholder="Search for products..." class="w-full p-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                <button class="btn-primary px-6 py-3" data-key="search_btn">Search</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Main Product Grid -->
+                <div id="productGrid" class="md:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <p class="text-center text-gray-500" data-key="loading_products">Loading products...</p>
+                </div>
+
+                <!-- Mini Sidebar for Trends -->
+                <div class="md:col-span-1 p-6 card hidden md:block">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800" data-key="mandi_title">Mandi Prices & Trends</h3>
+                        <i class="ri-line-chart-line text-2xl text-green-600"></i>
+                    </div>
+                    <ul class="space-y-4 text-gray-600">
+                        <li>
+                            <p class="font-semibold" data-key="wheat_trend_title">Wheat</p>
+                            <div class="flex items-center text-sm">
+                                <span class="text-green-500 mr-2" data-key="wheat_trend_change">▲ 2.5%</span>
+                                <span data-key="wheat_trend_price">₹2,100 / quintal</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-semibold" data-key="onions_trend_title">Onions</p>
+                            <div class="flex items-center text-sm">
+                                <span class="text-red-500 mr-2" data-key="onions_trend_change">▼ 5.1%</span>
+                                <span data-key="onions_trend_price">₹1,500 / quintal</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-semibold" data-key="potatoes_trend_title">Potatoes</p>
+                            <div class="flex items-center text-sm">
+                                <span class="text-green-500 mr-2" data-key="potatoes_trend_change">▲ 0.8%</span>
+                                <span data-key="potatoes_trend_price">₹900 / quintal</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating "List Product" button -->
+    <button id="addProductBtn" class="float-btn btn-primary text-3xl text-white flex items-center justify-center" data-key="add_product_btn">
+        <i class="ri-add-line"></i>
+    </button>
+
+    <!-- Combined Govt Schemes & Transparency Section -->
+    <section id="schemes-transparency" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-key="schemes_title">Government Schemes & Transparency</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Government Schemes Column -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left" data-key="gov_schemes_subtitle">Government Schemes for Farmers</h3>
+                    <div class="space-y-6">
+                        <div class="card p-6">
+                            <i class="ri-bank-line text-5xl text-blue-600 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2" data-key="pm_kisan_title">PM Kisan Samman Nidhi</h4>
+                            <p class="text-gray-600" data-key="pm_kisan_desc">Provides ₹6,000 per year to eligible farmer families in three equal installments.</p>
+                            <button class="mt-4 px-4 py-2 rounded-full bg-green-200 text-green-800 font-medium hover:bg-green-300 transition" onclick="playAudio('PM Kisan Samman Nidhi provides ₹6,000 per year to eligible farmer families in three equal installments.')" data-key="play_audio_btn">
+                                Play Audio <i class="ri-volume-up-line"></i>
+                            </button>
+                        </div>
+                        <div class="card p-6">
+                            <i class="ri-credit-card-line text-5xl text-amber-600 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2" data-key="kcc_title">Kisan Credit Card (KCC)</h4>
+                            <p class="text-gray-600" data-key="kcc_desc">Provides timely credit to farmers for their short-term credit requirements.</p>
+                            <button class="mt-4 px-4 py-2 rounded-full bg-green-200 text-green-800 font-medium hover:bg-green-300 transition" onclick="playAudio('Kisan Credit Card provides timely credit to farmers for their short-term credit requirements.')" data-key="play_audio_btn">
+                                Play Audio <i class="ri-volume-up-line"></i>
+                            </button>
+                        </div>
+                        <div class="card p-6">
+                            <i class="ri-shield-check-line text-5xl text-purple-600 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2" data-key="fasal_bima_title">Fasal Bima Yojana</h4>
+                            <p class="text-gray-600" data-key="fasal_bima_desc">Offers insurance coverage and financial support against crop failure.</p>
+                            <button class="mt-4 px-4 py-2 rounded-full bg-green-200 text-green-800 font-medium hover:bg-green-300 transition" onclick="playAudio('Fasal Bima Yojana offers insurance coverage and financial support against crop failure.')" data-key="play_audio_btn">
+                                Play Audio <i class="ri-volume-up-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Transparency Column -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left" data-key="transparency_subtitle">Transparency & Trust</h3>
+                    <div class="card p-8 md:p-12 space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <i class="ri-group-line text-5xl text-green-600"></i>
+                            <div>
+                                <h4 class="text-xl font-semibold" data-key="verified_title">Verified Community</h4>
+                                <p class="text-gray-600" data-key="verified_desc">All users are verified to ensure safe and reliable trading.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="ri-exchange-2-line text-5xl text-green-600"></i>
+                            <div>
+                                <h4 class="text-xl font-semibold" data-key="secure_transactions_title">Secure Transactions</h4>
+                                <p class="text-gray-600" data-key="secure_transactions_desc">Our payment gateway protects both buyers and sellers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="ri-megaphone-line text-5xl text-green-600"></i>
+                            <div>
+                                <h4 class="text-xl font-semibold" data-key="advisory_title">Audio & Text Advisory</h4>
+                                <p class="text-gray-600" data-key="advisory_desc">Get important updates and advice in both text and audio formats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Hub Section -->
+    <section id="learning" class="bg-gray-50 py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-key="learning_title">Learning Hub</h2>
+            <div class="flex justify-center space-x-4 mb-8 text-sm md:text-base">
+                <button class="px-4 py-2 rounded-full font-medium bg-green-200 text-green-800" data-key="all_btn">All</button>
+                <button class="px-4 py-2 rounded-full font-medium bg-gray-200 text-gray-600 hover:bg-green-200 hover:text-green-800 transition" data-key="soil_btn">Soil</button>
+                <button class="px-4 py-2 rounded-full font-medium bg-gray-200 text-gray-600 hover:bg-green-200 hover:text-green-800 transition" data-key="water_btn">Water</button>
+                <button class="px-4 py-2 rounded-full font-medium bg-gray-200 text-gray-600 hover:bg-green-200 hover:text-green-800 transition" data-key="crops_btn">Crops</button>
+                <button class="px-4 py-2 rounded-full font-medium bg-gray-200 text-gray-600 hover:bg-green-200 hover:text-green-800 transition" data-key="new_tech_btn">New Tech</button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Recommended Video Card -->
+                <div class="card p-6 sm:col-span-2 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 bg-green-100">
+                    <iframe class="rounded-xl w-full md:w-1/3 h-auto aspect-video" src="https://www.youtube.com/embed/4g8wG7xTLhg?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="text-center md:text-left">
+                        <p class="text-sm text-green-600 font-semibold mb-1" data-key="recommended_for_you">Recommended for you</p>
+                        <h3 class="font-bold text-xl md:text-2xl text-gray-800" data-key="video_title_1">5 Soil Features No One Talk About</h3>
+                        <p class="text-gray-600 mt-2" data-key="video_desc_1"> Discover 5 little-known soil features that hold the key to healthier plants, richer crops, and a thriving ecosystem beneath your feet!</p>
+                    </div>
+                </div>
+                <!-- Video Card 1 -->
+                <div class="card p-6">
+                    <img src="https://placehold.co/500x300/e5e5e5/000000?text=Video+Thumbnail" alt="Video Thumbnail" class="rounded-xl w-full h-auto mb-4">
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="video_title_2">Advanced Drip Irrigation</h3>
+                    <p class="text-gray-600 mt-2" data-key="video_desc_2">Learn how to install an efficient and modern drip irrigation system for better water management.</p>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="card p-6">
+                    <img src="https://placehold.co/500x300/e5e5e5/000000?text=Video+Thumbnail" alt="Video Thumbnail" class="rounded-xl w-full h-auto mb-4">
+                    <h3 class="font-bold text-2xl text-gray-800" data-key="video_title_3">Soil Health Management</h3>
+                    <p class="text-gray-600 mt-2" data-key="video_desc_3">Simple tips and tricks to improve your soil's health and increase your overall crop yield.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-key="community_title">Community Forum</h2>
+            <p id="userIdDisplay" class="text-center text-sm text-gray-500 mb-4" data-key="user_id_display">You are not authenticated. Data will not be shared.</p>
+            <div class="card p-6">
+                <div id="messagesContainer" class="h-80 overflow-y-auto mb-4 p-4 border rounded-xl bg-gray-50 space-y-4">
+                    <p class="text-center text-gray-500" data-key="no_messages_text">No messages yet. Start the conversation!</p>
+                </div>
+                <div class="flex space-x-2">
+                    <input id="messageInput" type="text" placeholder="Send a message..." class="flex-grow p-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                    <button id="sendMessageBtn" class="btn-primary px-4 py-2" data-key="send_btn">
+                        <i class="ri-send-plane-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p data-key="footer_rights">&copy; 2025 KrishiOne. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-sm font-medium">
+                <a href="#" class="hover:text-white transition" data-key="about_link">About</a>
+                <a href="#" class="hover:text-white transition" data-key="contact_link">Contact</a>
+                <a href="#" class="hover:text-white transition" data-key="privacy_link">Privacy</a>
+            </div>
+            <div class="flex justify-center space-x-2 mt-4 text-sm">
+                <a href="#" class="hover:text-white transition lang-select" data-lang="en">English</a> | 
+                <a href="#" class="hover:text-white transition lang-select" data-lang="hi">हिंदी</a> | 
+                <a href="#" class="hover:text-white transition lang-select" data-lang="pa">ਪੰਜਾਬੀ</a> | 
+                <a href="#" class="hover:text-white transition lang-select" data-lang="bn">বাংলা</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content text-center">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800" data-key="add_product_modal_title">Add a New Product</h3>
+            <p class="text-gray-600 mb-6" data-key="add_product_modal_desc">Please fill in the details for your product listing.</p>
+            <input id="productNameInput" type="text" placeholder="Product Name" class="w-full p-3 mb-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none" data-key="product_name_input_placeholder">
+            <input id="productPriceInput" type="number" placeholder="Price (₹)" class="w-full p-3 mb-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none" data-key="product_price_input_placeholder">
+            <input id="productLocationInput" type="text" placeholder="Location" class="w-full p-3 mb-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none" data-key="product_location_input_placeholder">
+            <input id="productContactInput" type="tel" placeholder="Phone Number 📱" class="w-full p-3 mb-6 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 focus:outline-none" data-key="product_contact_input_placeholder">
+            <div class="flex justify-around space-x-4">
+                <button id="cancelModalBtn" class="w-1/2 btn-secondary py-3" data-key="cancel_btn">Cancel</button>
+                <button id="submitModalBtn" class="w-1/2 btn-primary py-3" data-key="add_product_btn">Add Product</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal for alerts -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content text-center">
+            <h3 id="infoModalTitle" class="text-2xl font-bold mb-4 text-gray-800" data-key="info_modal_title"></h3>
+            <p id="infoModalMessage" class="text-gray-600 mb-6" data-key="info_modal_message"></p>
+            <button id="infoModalCloseBtn" class="w-full btn-primary py-3" data-key="ok_btn">OK</button>
+        </div>
+    </div>
+
+    <div id="problemModal"
+class="fixed inset-0 bg-black/70 hidden z-50 flex items-center justify-center">
+
+<div class="bg-white rounded-3xl p-8 w-[90%] max-w-5xl relative">
+
+<button
+onclick="document.getElementById('problemModal').classList.add('hidden')"
+class="absolute top-4 right-6 text-4xl">
+
+&times;
+
+</button>
+
+<img
+src="images/agri-solution.png"
+class="rounded-2xl w-full">
+
+<div class="mt-8 grid md:grid-cols-2 gap-8">
+
+<div>
+
+<h3 class="text-2xl font-bold mb-3">
+Current Challenges
+</h3>
+
+<ul class="space-y-2">
+
+<li>✔ Weather uncertainty</li>
+
+<li>✔ Lack of expert guidance</li>
+
+<li>✔ Pest outbreaks</li>
+
+<li>✔ Low digital literacy</li>
+
+<li>✔ Excessive fertilizer usage</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3 class="text-2xl font-bold mb-3">
+KrishiOne Solution
+</h3>
+
+<ul class="space-y-2">
+
+<li>✔ AI Crop Advisory</li>
+
+<li>✔ Soil Health Analysis</li>
+
+<li>✔ Market Intelligence</li>
+
+<li>✔ Weather Forecasting</li>
+
+<li>✔ Multilingual Voice Assistant</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+    
+</body>
+<script src="script.js"></script>
+</html>
